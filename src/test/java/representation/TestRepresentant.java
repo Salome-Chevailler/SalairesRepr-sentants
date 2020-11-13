@@ -116,4 +116,12 @@ public class TestRepresentant {
             r.enregistrerCA(0, -1);
         });
     }
+
+    @Test
+    public void testPourcentageInvalideSalaireMensuels() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            r.salaireMensuel(0, -0.1f);
+        });
+    }
+
 }
