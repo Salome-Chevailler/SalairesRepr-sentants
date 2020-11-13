@@ -124,4 +124,9 @@ public class TestRepresentant {
         });
     }
 
+    @Test
+    public void testToStringRepresentant() {
+        assertEquals("Representant{numero=36, nom=Bastide, prenom=Rémi}", r.toString());
+    }
+
 }
