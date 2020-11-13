@@ -110,4 +110,10 @@ public class TestRepresentant {
         });
     }
 
+    @Test
+    public void testMontantInvalideEnregistrerCA() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            r.enregistrerCA(0, -1);
+        });
+    }
 }
