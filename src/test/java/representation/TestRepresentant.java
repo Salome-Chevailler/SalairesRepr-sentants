@@ -95,13 +95,19 @@ public class TestRepresentant {
             r.enregistrerCA(12, FIXE_BASTIDE);
         });
     }
-    
+
     @Test
-    public void testMoisInvalideInferieurSalaireMensuel(){
+    public void testMoisInvalideInferieurSalaireMensuel() {
         assertThrows(IllegalArgumentException.class, () -> {
             r.salaireMensuel(-1, 0.1f);
         });
     }
-    
-    
+
+    @Test
+    public void testMoisInvalideSupérieurSalaireMensuel() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            r.salaireMensuel(-1, 0.1f);
+        });
+    }
+
 }
