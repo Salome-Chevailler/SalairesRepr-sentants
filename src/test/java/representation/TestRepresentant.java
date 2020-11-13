@@ -133,5 +133,18 @@ public class TestRepresentant {
     public void testToStringZG() {
         assertEquals("ZoneGeographique{numero=1, nom=Occitanie, indemniteRepas=200.0}", occitanie.toString());
     }
-
+    
+    @Test
+    public void testAllGetterSetterRepresentant() {
+    	ZoneGeographique aquitaine = new ZoneGeographique(2,"Aquitaine");
+    	r.setSecteur(aquitaine);
+    	r.setAdresse("Castres");
+    	assertEquals(36,r.getNumero());
+    	assertEquals("Bastide",r.getNom());
+    	assertEquals("Rémi",r.getPrenom());
+    	assertEquals(1000.0,r.getSalaireFixe());
+    	assertEquals("Castres",r.getAdresse());
+    	assertEquals(aquitaine,r.getSecteur());
+    }
+    
 }
