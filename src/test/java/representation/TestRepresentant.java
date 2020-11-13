@@ -89,4 +89,11 @@ public class TestRepresentant {
         });
     }
 
+    @Test
+    public void testMoisInvalideSupérieurEnregistrerCA() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            r.enregistrerCA(12, FIXE_BASTIDE);
+        });
+    }
+
 }
